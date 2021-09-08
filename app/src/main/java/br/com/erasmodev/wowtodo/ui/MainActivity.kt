@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import br.com.erasmodev.wowtodo.databinding.ActivityMainBinding
 import br.com.erasmodev.wowtodo.datasource.TaskDataSource
 
@@ -35,7 +36,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         adapter.listenerDelete = {
-
+            TaskDataSource.deleteTask(it)
+            updateList()
         }
     }
 
@@ -45,7 +47,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateList() {
-        adapter.submitList(TaskDataSource.getList())
+        val list = TaskDataSource.getList()
+        binding.includeState.ctEmpty.visibility = if (list.isEmpty()) View.VISIBLE else View.GONE
+
+        adapter.submitList(list)
     }
 
     companion object {

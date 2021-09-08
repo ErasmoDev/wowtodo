@@ -8,4 +8,5 @@
     <string name="label_cancelar">Cancelar</string>
     <string name="label_edit">Editar</string>
     <string name="label_delete">Deletar</string>
+    <string name="label_empty">Ops, Você não tem\nnenhum tarefa.\nCrie algumas!!</string>
 </resources>
