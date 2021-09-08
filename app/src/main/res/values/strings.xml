@@ -6,4 +6,6 @@
     <string name="label_description">Descrição</string>
     <string name="label_hora">Hora</string>
     <string name="label_cancelar">Cancelar</string>
+    <string name="label_edit">Editar</string>
+    <string name="label_delete">Deletar</string>
 </resources>
